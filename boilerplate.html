@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ada Module: Artificial Intelligence</title>
+
+    <style>
+      body {
+        background-color: #a0a0a0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+      }
+      img {
+        max-width: 200px;
+        max-height: 200px;
+	  }
+	  button, input{
+		  font-size:20px;
+    }
+    
+    #label-container p {
+      line-height: 0.25em;
+    }
+	 
+    </style>
+  </head>
+
+  <body>
+    <div>Antonio Roig's Image Classification Engine</div>
+    <div>
+      <label for="image_uploads"
+        >Please choose an image to upload (.JPEG or .JPG only)</label
+      >
+      <input
+        type="file"
+        id="image_uploads"
+        name="image_uploads"
+        accept=".jpg, .jpeg"
+        multiple
+      />
+    </div>
+    
+	<img max-width="200px" max-height="200px" id="preview" />
+	<button style="display:block;" id="submit">Submit</button>
+    <div id="label-container"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script src="ml.js"></script>
+</html>
